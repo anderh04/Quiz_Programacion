@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Conocimientos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div id="loading-content">
+            <img src="code.gif" alt="Cargando..." id="dog-image">
+            <p>Cargando...</p>
+        </div>
+    </div>
+
+    <div class="quiz-container hidden">
+        <header>
+            <img src="discord.svg" alt="logo">
+        </header>
+        <div id="start-form">
+            <h1>Bienvenido al Quiz</h1>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Escribe tu nombre" required><br><br>
+
+            <label for="last-name">Apellido:</label>
+            <input type="text" id="last-name" placeholder="Escribe tu apellido" required><br><br>
+
+            <label for="career">Carrera:</label>
+            <select id="career" required>
+                <option value="" disabled selected>Selecciona tu carrera</option>
+                <option value="informatica">Informática</option>
+                <option value="sistemas">Sistemas</option>
+                <option value="electronica">Ingeniería Electrónica</option>
+                <option value="Redes y Comunicaciones">Redes y Comunicaciones</option>
+                <option value="Ciencia de datos">Ciencia de Datos</option>
+                <option value="Ingeniería de Sistemas y Computación">Ingeniería de Sistemas y Computación</option>
+            </select><br><br>
+
+            <button id="start-button">Iniciar Quiz</button>
+        </div>
+
+        <div id="quiz" class="hidden">
+            <h1>Quiz de Conocimientos</h1>
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="options"></div>
+            </div>
+            <button id="next-button" class="hidden">Siguiente</button>
+        </div>
+
+        <div id="result" class="hidden">
+            <p id="score"></p>
+            <button id="restart-button">Volver al formulario</button>
+        </div>        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
